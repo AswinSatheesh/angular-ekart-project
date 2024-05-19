@@ -445,4 +445,10 @@ export class ProductListComponent{
   totalProductCount = this.products.length;
   totalProdcutInStockCount = this.products.filter(p => p.is_in_inventory === true).length;
   totalProductInOutOfStock = this.products.filter(po => po.is_in_inventory === false).length;
+
+  selectedFilteredRadioButton: string = 'all';
+  onFilterChanged(value){
+    console.log(value);
+    this.selectedFilteredRadioButton = value;
+  }
 }
