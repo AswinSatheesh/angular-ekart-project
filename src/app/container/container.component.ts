@@ -9,4 +9,11 @@ export class ContainerComponent {
 
   listOfString : string[] = ["Aswin", "Kannan", "Achu", "Ambu"];
 
+  searchText : string = '';
+
+  onSearcgTextChanged(value: string){
+    this.searchText = value;
+  }
+
+
 }
