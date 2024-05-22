@@ -17,8 +17,9 @@ export class SearchComponent  {
   }
 
 
-  searchInput(event : any){
-    this.searchText = event.target.value;
+  searchInput(searchValue : HTMLInputElement){
+    this.searchText = searchValue.value;
+    this.searchTextChanged.emit(this.searchText);
   }
 
 
