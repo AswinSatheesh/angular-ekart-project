@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/Models/Product';
 
 @Component({
   selector: 'product-list',
@@ -7,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductListComponent{
 
+  selectedProduct : Product;
   products = [
     {
       id: 1,
