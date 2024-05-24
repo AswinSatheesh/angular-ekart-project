@@ -1,25 +1,6 @@
 <div class="ekart--product--container">
-    <!-- <img src={{product.pImage}}>
-    <img src="/assets/images/th.jpeg" alt="image" width="10%" height="20%">
-    <img [src]="product.pImage" alt="" width="200" height="200">
-    <p>Name : {{product.name}}</p>
-    <p>Price : {{ '$' + product.price}}</p>
-    <p>Color : {{product.color}}</p>
-    <p>Discounted Price : {{ getDiscountPrice().toFixed(2) }}</p>
-    <p>{{product.instock > 0 ? 'items left = '  + product.instock : 'no items left'}}</p>
-    <button [disabled] = "!(product.instock > 0)">Buy Now</button>
-    <br>
-    <input type="text" (input) = "onNameChange($event)" >
-    <br>
-    <p>Name : {{inputVal}}  </p>
-    <button (click)="decrementCartValue()">-</button>
-    <span>{{addToCart}}</span>
-    <button (click)="incrementCartValue()">+</button> -->
     <app-search (searchTextChanged)="onSearcgTextChanged($event)"></app-search>
 
-    <!-- <div *ngFor = "let item of listOfString">
-        <p>Current item is : {{item}}</p>
-    </div> -->
     <product-list [searchText] = "searchText" #productListComponent></product-list>
 
     <product-detail *ngIf = "productListComponent.selectedProduct"></product-detail>
