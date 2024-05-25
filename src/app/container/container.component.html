@@ -3,7 +3,7 @@
 
     <product-list [searchText] = "searchText" #productListComponent></product-list>
 
-    <product-detail *ngIf = "productListComponent.selectedProduct"></product-detail>
+    <product-detail *ngIf = "productListComponent.selectedProduct" [productListcomp] = "productListComponent"></product-detail>
     
 </div>
 
