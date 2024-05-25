@@ -19,30 +19,24 @@
             <p>
                 <b>Price Each Pair:</b>
                 <span style="background-color: red; color:white"><s>${{product.price}}</s></span>
-                <span style="background-color: green; color:white">${{product.discountPrice}}</span> (Inclusive of all taxes)
+                <span *ngIf ="product.discountPrice" style="background-color: green; color:white">${{product.discountPrice}}</span> (Inclusive of all taxes)
             </p>
         </div>
         <div class="ekart-product-detail-size">
             <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
                 <h4>Available Size</h4>
             </div>
-            <diV style="margin-top: 20px">
-                <span class="ekart-product-detail-available-size">6</span>
-                <span class="ekart-product-detail-available-size">7</span>
-                <span class="ekart-product-detail-available-size">8</span>
-                <span class="ekart-product-detail-available-size">9</span>
-            </diV>                
+            <div *ngFor="let sz of product.size" style="margin-top: 20px; display:inline-block">
+                <span class="ekart-product-detail-available-size">{{ sz }}</span>
+            </div>                
         </div>
 
         <div class="ekart-product-detail-color">
             <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
                 <h4>Available Color</h4>
             </div>
-            <diV style="margin-top: 20px;">
-                <span class="ekart-product-detail-available-color" style="background-color: red;"></span>
-                <span class="ekart-product-detail-available-color" style="background-color: green;"></span>
-                <span class="ekart-product-detail-available-color" style="background-color: black;"></span>
-                <span class="ekart-product-detail-available-color" style="background-color: blue;"></span>
+            <diV *ngFor = "let cl of product.color" style="display : inline-block; margin-top: 20px;">
+                <span class="ekart-product-detail-available-color" [ngStyle] = "{'background-color' : cl}"></span>
             </diV>                
         </div>
 
