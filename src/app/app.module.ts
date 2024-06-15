@@ -15,7 +15,8 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 import { FeaturedBrandsComponent } from './container/featured-brands/featured-brands.component';
 import {SetBackground} from './CustomDirectives/setBackground.directive';
-import { HighlightDirective } from './CustomDirectives/highlight.directive'
+import { HighlightDirective } from './CustomDirectives/highlight.directive';
+import { AppHoverDirective } from './CustomDirectives/app-hover.directive'
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { HighlightDirective } from './CustomDirectives/highlight.directive'
     ProductDetailComponent,
     FeaturedBrandsComponent,
     SetBackground,
-    HighlightDirective
+    HighlightDirective,
+    AppHoverDirective
   ],
   imports: [
     BrowserModule,
